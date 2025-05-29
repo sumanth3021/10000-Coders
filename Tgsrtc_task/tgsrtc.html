@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TSRTC Bus Pass</title>
+    <style>
+        div {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            border-radius: 1%;
+            display: inline-block;
+            background-color: rgb(191, 195, 228);
+            width: 800px;
+        }
+
+        h3.main {
+            color: rgb(8, 8, 189);
+            font-family: Arial, sans-serif;
+        }
+
+        h3.main1 {
+            color: rgb(1, 1, 11);
+            font-family: Arial, sans-serif;
+            margin-top: -10px;
+        }
+
+        fieldset {
+            border: 2px solid rgb(185, 185, 202);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 5px;
+            width: 700px;
+        }
+
+        legend {
+            background-color: rgb(0, 134, 178);
+            color: white;
+            padding: 5px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div>
+            <img src="Screenshot 2025-05-29 190835.png" width="50">
+            <h3 class="main">TELANGANA STATE ROAD TRANSPORT CORPORATION</h3>
+            <h3 class="main1">GENERAL BUS PASS APPLICATION</h3>
+        </div>
+    </center>
+
+    <form action="submitted.html" method="get">
+        <fieldset>
+            <legend>Applicant Details</legend>
+            <table>
+                <tr>
+                    <td>Applicant Name:</td>
+                    <td><input type="text" name="applicant_name" required></td>
+                    <td>Father's Name:</td>
+                    <td><input type="text" name="father_name" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob" required></td>
+                    <td>Gender:</td>
+                    <td>
+                        <label>Male</label><input type="radio" name="gender" value="Male">
+                        <label>Female</label><input type="radio" name="gender" value="Female">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age as on</td>
+                    <td><input type="date" name="age_as_on" required></td>
+                    <td>Adhar number:</td>
+                    <td><input type="text" name="adhar_number" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number:</td>
+                    <td><input type="tel" name="mobile_number" required></td>
+                    <td>Email ID:</td>
+                    <td><input type="email" name="email_id" required></td>
+                </tr>
+                <tr>
+                    <td>Photo:</td>
+                    <td><input type="file" accept=".pdf"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Residential Address Details</legend>
+            <table>
+                <tr>
+                    <td>Aplicant's Address:</td>
+                    <td><textarea cols="15" name="address" required></textarea></td>
+                    <td>District:</td>
+                    <td>
+                        <select name="district" required>
+                            <option value="" disabled selected>--select District--</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Rangareddy">Rangareddy</option>
+                            <option value="Medchal">Medchal</option>
+                            <option value="Nalgonda">Nalgonda</option>
+                            <option value="Warangal">Warangal</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mandal:</td>
+                    <td>
+                        <select name="mandal" required>
+                            <option value="" disabled selected>--select Mandal--</option>
+                            <option value="Mandal1">Mandal 1</option>
+                            <option value="Mandal2">Mandal 2</option>
+                            <option value="Mandal3">Mandal 3</option>
+                        </select>
+                    </td>
+                    <td>Village:</td>
+                    <td>
+                        <select name="village" required>
+                            <option value="" disabled selected>--select Village--</option>
+                            <option value="Village1">Village 1</option>
+                            <option value="Village2">Village 2</option>
+                            <option value="Village3">Village 3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pincode:</td>
+                    <td><input type="text" name="pincode" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Bus Pass Details</legend>
+            <table>
+                <tr>
+                    <td>Type of Pass:</td>
+                    <td>
+                        <select name="type_of_pass" required>
+                            <option value="general">General</option>
+                            <option value="student">Student</option>
+                            <option value="senior_citizen">Senior Citizen</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Route:</td>
+                    <td><input type="text" name="route" required></td>
+                </tr>
+                <tr>
+                    <td>Validity Period:</td>
+                    <td>
+                        <input type="date" name="validity_start" required>
+                        to
+                        <input type="date" name="validity_end" required>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mode of Payment & Pass Collection</legend>
+            <table>
+                <tr>
+                    <td>Payment Mode:</td>
+                    <td>
+                        <select name="payment_mode" required>
+                            <option value="online">Online</option>
+                            <option value="offline">Offline</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pass Delivery Mode:</td>
+                    <td>
+                        <select name="collection_mode" required>
+                            <option value="At counter">At counter</option>
+                            <option value="home_delivery">Home Delivery</option>
+                        </select>
+                    </td>
+                    <td>Collection Center:</td>
+                    <td>
+                        <select name="collection_center" required>
+                            <option value="center1">Center 1</option>
+                            <option value="center2">Center 2</option>
+                            <option value="center3">Center 3</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+        <center>
+            <img src="Screenshot 2025-05-29 210731.png" width="200"><br>
+            <label for="captcha">Captcha:</label>
+            <input type="text" id="captcha" name="captcha" placeholder="Enter Captcha" required><br><br>
+            <button type="submit"
+                style="width: 100px; height: 40px; background-color: green; color: white; font-size: 16px;">Submit</button>
+        </center>
+    </form>
+</body>
+
+</html>
